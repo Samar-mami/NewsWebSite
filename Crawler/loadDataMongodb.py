@@ -1,6 +1,7 @@
 """#Connect to MongoDB"""
 from pymongo import MongoClient
-from Crawler.config import username,password,database,collection
+#from NewsWebSite.Crawler.config import username, password, database, collection
+
 
 # Connect to MongoDB client and database/collection
 def connect_mongo_db_collection(username, password, database, collection):
@@ -18,7 +19,7 @@ def connect_mongo_db_collection(username, password, database, collection):
 
 
 # Insert the dataframe tp mongodb
-def store_data(df):
+def store_data(df,username, password, database, collection):
     if 'index' not in df.columns:
         df.reset_index(inplace=True)
     data_dict = df.to_dict("records")
@@ -26,7 +27,7 @@ def store_data(df):
     collection = connect_mongo_db_collection(username, password, database, collection)
     # Insert collection
     collection.delete_many({})
-    print("files deleted")
+    # print("files deleted")
     try:
         # Delete existing documents from the collection
         collection.insert_many(data_dict)
