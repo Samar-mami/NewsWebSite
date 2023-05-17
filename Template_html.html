@@ -24,11 +24,11 @@
             <tr>
                 <th>Headline</th>
                 <th>Description</th>
-                <th>Article Url</th>
                 <th>Author</th>
                 <th>Article text</th>
-                <th>Publication date</th>
                 <th>Kicker</th>
+				<th>Publication date</th>
+				<th>Article Url</th>
             </tr>
         </thead>
         <tbody>
@@ -37,10 +37,10 @@
                 <td>{{ article.Headline }}</td>
                 <td>{{ article.Description }}</td>
                 <td>{{ article.Author }}</td>
-                <td>{{ article.Description }}</td>
-                <td>{{ article.Article_text }}</td>
+				<td>{{ article.Article_text }}</td>
+                <td>{{ article.Kicker }}</td>
                 <td>{{ article.Publication_date }}</td>
-                <td><a href="{{ article['article_url'] }}">{{ article['article_url'] }}</a></td>
+                <td><a href="{{ article['Article_url'] }}">{{ article['Article_url'] }}</a></td>
             </tr>
             {% endfor %}
         </tbody>
