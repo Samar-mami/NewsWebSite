@@ -1,7 +1,7 @@
 """# Create an API"""
 from flask import Flask, render_template, jsonify
-from NewsWebSite.Crawler.config import username, password, database, collection
-from NewsWebSite.Crawler.loadDataMongodb import connect_mongo_db_collection
+from Crawler.config import username, password, database, collection
+from Crawler.loadDataMongodb import connect_mongo_db_collection
 
 app = Flask(__name__)
 collection = connect_mongo_db_collection(username, password, database, collection)
