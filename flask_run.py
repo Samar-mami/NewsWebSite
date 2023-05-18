@@ -8,7 +8,7 @@ collection = connect_mongo_db_collection(username, password, database, collectio
 
 
 @app.route('/', methods=['GET'])
-def get_all_articles():
+def api_get_all_articles():
     articles = list(collection.find({}, {'_id': 0}))
     return render_template('Template_html.html', articles=articles)
     # return articles
@@ -16,7 +16,7 @@ def get_all_articles():
 
 # Get an article by its URL
 @app.route('/search', methods=['GET'])
-def search_articles():
+def api_search_articles():
     url = request.args.get('url')
     if not url:
         return jsonify({'error': 'Missing url parameter'}), 400
