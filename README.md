@@ -30,3 +30,27 @@ docker ps -a
 4. Once succeeded, you should now run the container for each docker image executing these commands:
 docker run 
 
+Execute the first container if you want to fill the MongoDB database with tha articles of the day (This procedure could have been autoamted with Kubernetes for a daily execution for example)
+
+Execute the second container to run the API application. This will give you an endpoint : 127.0.0.1:5000 to access data in two ways:
+ - Data rendred in HTML formal : on this base url http://127.0.0.1:5000 for the sake of the test.
+ - Data in json format : to get data in json format, the api_functions.py script was written for you (see the section API documentation)
+ 
+ ### API documentation
+Welcome to the News Website API documentation. This API allows you to retrieve articles from news website www.thegardian.com. Please follow the guidelines below to access the available endpoints and parameters.
+#### Base URL
+The base URL for accessing the News Website API is: http://127.0.0.1:5000
+This is a local url (in practice, it should be a defined endpoint)
+
+#### Endpoints
+1. Get all the articles
+Retrieves a list of the articles crawled in the news website.
+
+Endpoint: /
+
+HTTP Method: GET
+
+get_all_articles() uses the base url to give json filr.
+
+
+
