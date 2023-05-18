@@ -1,5 +1,5 @@
 """# Create an API"""
-from flask import Flask, render_template, jsonify
+from flask import Flask, render_template, jsonify, request
 from Crawler.config import username, password, database, collection
 from Crawler.loadDataMongodb import connect_mongo_db_collection
 
@@ -15,10 +15,12 @@ def get_all_articles():
 
 
 # Get an article by its URL
-@app.route('/<url>', methods=['GET'])
-def get_article_by_url(url):
-    article = collection.find_one({'Article_url': url}, {'_id': 0})
-    if article:
-        return render_template('Template_html.html', article=article)
-        # return article
-    return jsonify({'message': 'Article not found :('})
+@app.route('/search', methods=['GET'])
+def search_articles():
+    url = request.args.get('url')
+    if not url:
+        return jsonify({'error': 'Missing url parameter'}), 400
+
+    articles = collection.find({'Article_url': {'$regex': url, '$options': 'i'}})
+    results = [article for article in articles]
+    return render_template('Template_html.html', articles=results)

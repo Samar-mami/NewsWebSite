@@ -15,11 +15,20 @@ WORKDIR /code
 # Transferring the code and essential data
 
 COPY Crawler ./Crawler
+COPY templates ./templates
 COPY Pipfile ./Pipfile
 COPY Pipfile.lock ./Pipfile.lock
-COPY run.py ./run.py
+COPY flask_API.py ./flask_API.py
 
 RUN pip install pipenv
 RUN pipenv install --ignore-pipfile --system
 
-CMD ["python3.10","run.py"]
+# Set the environment variables
+ENV FLASK_APP=flask_API.py
+ENV FLASK_RUN_HOST=0.0.0.0
+
+# Expose the port on which the Flask API runs
+EXPOSE 5000
+
+# Start the Flask application
+CMD ["flask", "run"]

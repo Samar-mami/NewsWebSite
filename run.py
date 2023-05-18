@@ -4,7 +4,6 @@
 from Crawler.web_crawler import scrap_website
 from Crawler.loadDataMongodb import store_data
 from Crawler.config import username, password, database, collection
-from Crawler.flask_API import app
 
 
 def main():
@@ -17,4 +16,3 @@ def main():
 
 if __name__ == '__main__':
     main()
-    app.run()
