@@ -76,4 +76,5 @@ get_article_by_url(url)
 -> in api_functions.py, takes a url parameter and uses the endpoint above to return the article by its url in json format.
 
 
+## Project structure
 
