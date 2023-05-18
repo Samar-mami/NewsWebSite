@@ -1,6 +1,5 @@
 """#Connect to MongoDB"""
 from pymongo import MongoClient
-#from NewsWebSite.Crawler.config import username, password, database, collection
 
 
 # Connect to MongoDB client and database/collection
@@ -19,7 +18,7 @@ def connect_mongo_db_collection(username, password, database, collection):
 
 
 # Insert the dataframe tp mongodb
-def store_data(df,username, password, database, collection):
+def store_data(df, username, password, database, collection):
     if 'index' not in df.columns:
         df.reset_index(inplace=True)
     data_dict = df.to_dict("records")

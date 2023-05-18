@@ -1,9 +1,9 @@
 """Running the news web crawler application"""
 # import logging
 # import logging.config
-from Crawler.web_crawler import scrap_website
-from Crawler.loadDataMongodb import store_data
-from Crawler.config import username, password, database, collection
+from web_crawler import scrap_website
+from loadDataMongodb import store_data
+from config import username, password, database, collection
 
 
 def main():
