@@ -1,21 +1,26 @@
 # NewsWebSite
 # News website crawler project
-Description
+## Description
 The News Website Crawler is a Python-based project that allows users to scrape and collect news articles from v the website www.thegaridan.com. 
 It is designed to streamline the process of gathering news data from multiple sources for analysis, research, or any other purpose.
 The crawler utilizes web scraping techniques to extract relevant information such as article titles, authors, publication dates, content, and URLs the news website. It navigates through the website's pages, follows links, and retrieves the desired data, all while adhering to the website's terms of service and respecting ethical considerations.
 
-Installation
+## Installation
 Prerequisites
-
-Steps
 1. Install Docker Desktop 
 https://docs.docker.com/desktop/install/windows-install/
 
+## Steps
 2. Create an account on Docker if you don't have one already
+
+I have two docker images. 
+The first dokcer image "samarmami18/web-crawler" is for an application that crawls the online news website www.theguardian.com/ using a crawler framework (BeautifulSoup in my case) to collect the articles (headline, description, text, ...) and stores the results in a MongoDB database.
+
+The second docker image "samarmami18/api_test" is for a Flask application that exposes an API to get articles data from the MongoDB.
 
 3. Pull the two docker images for my project "samarmami18/web-crawler" and "samarmami18/api_test".
 To do so, run this command in you cmd terminal:
+
 `docker pull samarmami18/web-crawler`
 docker pull samarmami18/api_test
 This will generate a container for each image.
@@ -24,3 +29,4 @@ docker ps -a
 
 4. Once succeeded, you should now run the container for each docker image executing these commands:
 docker run 
+
