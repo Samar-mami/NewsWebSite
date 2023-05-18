@@ -13,10 +13,10 @@ Steps
 https://docs.docker.com/desktop/install/windows-install/
 
 2. Create an account on Docker if you don't have one already
-3. 
-4. Pull the two docker images for my project "samarmami18/web-crawler" and "samarmami18/api_test".
+
+3. Pull the two docker images for my project "samarmami18/web-crawler" and "samarmami18/api_test".
 To do so, run this command in you cmd terminal:
-docker pull samarmami18/web-crawler
+`docker pull samarmami18/web-crawler`
 docker pull samarmami18/api_test
 This will generate a container for each image.
 You can see the container name with this command:
