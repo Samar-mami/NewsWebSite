@@ -17,9 +17,9 @@ WORKDIR /code
 COPY Crawler ./Crawler
 COPY Pipfile ./Pipfile
 COPY Pipfile.lock ./Pipfile.lock
-COPY run.py ./run.py
+#COPY Crawler/run.py ./run.py
 
 RUN pip install pipenv
 RUN pipenv install --ignore-pipfile --system
 
-CMD ["python3.10","run.py"]
+CMD ["python3.10","Crawler/run.py"]
