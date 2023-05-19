@@ -1,15 +1,38 @@
 # News website crawler project
 ## Description
+
 The News Website Crawler is a Python-based project that allows users to scrape and collect news articles from v the website www.thegaridan.com. 
 It is designed to streamline the process of gathering news data from the website "the garidan" for analysis, research, or any other purpose.
 The crawler utilizes web scraping techniques to extract relevant information such as article titles, authors, publication dates, content, and URLs the news website. It navigates through the website's pages, follows links, and retrieves the desired data, all while adhering to the website's terms of service and respecting ethical considerations.
 
 ## Installation
+
 Prerequisites
 - Docker Desktop
 - Docker account
 
+
+## Project structure
+
+The python project is constructed like the following:
+News website crawler
+- **Crawler:** crawls the website and stores data to MongoDB
+  - web_crawler.py
+  - loadDataMongodb.py
+  - run.py
+ 
+- **Flask_API:** creates an API to get all articles or get an article by url from MongoDB
+  - flask_app.py
+  - api_functions.py
+  - loadDataMongodb.py
+ 
+- **Dockerfile:** generates the first docker image "samarmami18/web-crawler"
+- **DockerfileFlask:** generates the second docker image "samamrmami18/api_test"
+
+
+
 ## Execution steps
+
 1. Install Docker Desktop 
 https://docs.docker.com/desktop/install/windows-install/
 
@@ -49,7 +72,8 @@ You can see the container name with this command:
 `docker ps -a`
 
 
- ### API documentation
+## API documentation
+ 
 Welcome to the News Website API documentation. This API allows you to retrieve articles from news website www.thegardian.com. Please follow the guidelines below to access the available endpoints and parameters.
 #### Base URL
 The base URL for accessing the News Website API is: http://127.0.0.1:5000
@@ -80,21 +104,6 @@ Retrieves an article crawled in the news website by its url.
 -> in api_functions.py, takes a url parameter and uses the endpoint above to return the article by its url in json format.
 
 
-## Project structure
-The python project is constructed like the following:
-News website crawler
-- **Crawler:** crawls the website and stores data to MongoDB
-  - web_crawler.py
-  - loadDataMongodb.py
-  - run.py
- 
-- **Flask_API:** creates an API to get all articles or get an article by url from MongoDB
-  - flask_app.py
-  - api_functions.py
-  - loadDataMongodb.py
- 
-- **Dockerfile:** generates the first docker image "samarmami18/web-crawler"
-- **DockerfileFlask:** generates the second docker image "samamrmami18/api_test"
 
 ## Notes
 
