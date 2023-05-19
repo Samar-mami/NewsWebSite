@@ -1,0 +1,87 @@
+<mxfile host="app.diagrams.net" modified="2023-05-19T16:13:35.438Z" agent="Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/113.0.0.0 Safari/537.36" etag="ar5-NDL2L3niQXkBQNQI" version="21.3.2" type="github">
+  <diagram name="Page-1" id="PNWEge09kvqdN7rWGrPT">
+    <mxGraphModel dx="1877" dy="549" grid="1" gridSize="10" guides="1" tooltips="1" connect="1" arrows="1" fold="1" page="1" pageScale="1" pageWidth="827" pageHeight="1169" math="0" shadow="0">
+      <root>
+        <mxCell id="0" />
+        <mxCell id="1" parent="0" />
+        <mxCell id="6d-npiuzgEx4-nf97ixw-5" style="edgeStyle=orthogonalEdgeStyle;rounded=0;orthogonalLoop=1;jettySize=auto;html=1;exitX=1;exitY=0.5;exitDx=0;exitDy=0;entryX=0;entryY=0.5;entryDx=0;entryDy=0;entryPerimeter=0;" edge="1" parent="1" source="6d-npiuzgEx4-nf97ixw-1" target="6d-npiuzgEx4-nf97ixw-4">
+          <mxGeometry relative="1" as="geometry" />
+        </mxCell>
+        <mxCell id="6d-npiuzgEx4-nf97ixw-1" value="Scraping worker" style="whiteSpace=wrap;html=1;aspect=fixed;" vertex="1" parent="1">
+          <mxGeometry x="270" y="200" width="80" height="80" as="geometry" />
+        </mxCell>
+        <mxCell id="6d-npiuzgEx4-nf97ixw-3" style="edgeStyle=orthogonalEdgeStyle;rounded=0;orthogonalLoop=1;jettySize=auto;html=1;entryX=0;entryY=0.5;entryDx=0;entryDy=0;exitX=0.875;exitY=0.5;exitDx=0;exitDy=0;exitPerimeter=0;startArrow=classic;startFill=1;" edge="1" parent="1" source="6d-npiuzgEx4-nf97ixw-2" target="6d-npiuzgEx4-nf97ixw-1">
+          <mxGeometry relative="1" as="geometry">
+            <mxPoint x="230" y="130" as="targetPoint" />
+          </mxGeometry>
+        </mxCell>
+        <mxCell id="6d-npiuzgEx4-nf97ixw-2" value="www.theguardian.com" style="ellipse;shape=cloud;whiteSpace=wrap;html=1;" vertex="1" parent="1">
+          <mxGeometry x="-30" y="200" width="170" height="80" as="geometry" />
+        </mxCell>
+        <mxCell id="6d-npiuzgEx4-nf97ixw-11" style="edgeStyle=orthogonalEdgeStyle;rounded=0;orthogonalLoop=1;jettySize=auto;html=1;endArrow=none;endFill=0;startArrow=classic;startFill=1;" edge="1" parent="1" source="6d-npiuzgEx4-nf97ixw-4" target="6d-npiuzgEx4-nf97ixw-10">
+          <mxGeometry relative="1" as="geometry" />
+        </mxCell>
+        <mxCell id="6d-npiuzgEx4-nf97ixw-4" value="DB" style="shape=cylinder3;whiteSpace=wrap;html=1;boundedLbl=1;backgroundOutline=1;size=15;" vertex="1" parent="1">
+          <mxGeometry x="600" y="200" width="60" height="80" as="geometry" />
+        </mxCell>
+        <mxCell id="6d-npiuzgEx4-nf97ixw-7" value="Fully managed MongoDB on cloud:&lt;br&gt;Replication, backups, scalability..." style="text;html=1;strokeColor=none;fillColor=none;align=center;verticalAlign=middle;whiteSpace=wrap;rounded=0;" vertex="1" parent="1">
+          <mxGeometry x="530" y="150" width="220" height="30" as="geometry" />
+        </mxCell>
+        <mxCell id="6d-npiuzgEx4-nf97ixw-9" style="edgeStyle=orthogonalEdgeStyle;rounded=0;orthogonalLoop=1;jettySize=auto;html=1;entryX=0.5;entryY=0;entryDx=0;entryDy=0;" edge="1" parent="1" source="6d-npiuzgEx4-nf97ixw-8" target="6d-npiuzgEx4-nf97ixw-1">
+          <mxGeometry relative="1" as="geometry" />
+        </mxCell>
+        <mxCell id="6d-npiuzgEx4-nf97ixw-8" value="Scheduler" style="whiteSpace=wrap;html=1;aspect=fixed;" vertex="1" parent="1">
+          <mxGeometry x="280" y="90" width="60" height="60" as="geometry" />
+        </mxCell>
+        <mxCell id="6d-npiuzgEx4-nf97ixw-10" value="API App" style="rounded=0;whiteSpace=wrap;html=1;" vertex="1" parent="1">
+          <mxGeometry x="570" y="430" width="120" height="40" as="geometry" />
+        </mxCell>
+        <mxCell id="6d-npiuzgEx4-nf97ixw-13" value="" style="outlineConnect=0;dashed=0;verticalLabelPosition=bottom;verticalAlign=top;align=center;html=1;shape=mxgraph.aws3.auto_scaling;fillColor=#F58534;gradientColor=none;" vertex="1" parent="1">
+          <mxGeometry x="510" y="441.75" width="60" height="48" as="geometry" />
+        </mxCell>
+        <mxCell id="6d-npiuzgEx4-nf97ixw-14" value="" style="rounded=1;arcSize=10;dashed=1;fillColor=none;gradientColor=none;dashPattern=8 3 1 3;strokeWidth=2;" vertex="1" parent="1">
+          <mxGeometry x="500" y="410" width="239.5" height="89.75" as="geometry" />
+        </mxCell>
+        <mxCell id="6d-npiuzgEx4-nf97ixw-16" style="edgeStyle=orthogonalEdgeStyle;rounded=0;orthogonalLoop=1;jettySize=auto;html=1;" edge="1" parent="1" source="6d-npiuzgEx4-nf97ixw-15" target="6d-npiuzgEx4-nf97ixw-14">
+          <mxGeometry relative="1" as="geometry" />
+        </mxCell>
+        <mxCell id="6d-npiuzgEx4-nf97ixw-15" value="" style="outlineConnect=0;dashed=0;verticalLabelPosition=bottom;verticalAlign=top;align=center;html=1;shape=mxgraph.aws3.classic_load_balancer;fillColor=#F58536;gradientColor=none;" vertex="1" parent="1">
+          <mxGeometry x="589.75" y="600" width="60" height="60" as="geometry" />
+        </mxCell>
+        <mxCell id="6d-npiuzgEx4-nf97ixw-19" style="edgeStyle=orthogonalEdgeStyle;rounded=0;orthogonalLoop=1;jettySize=auto;html=1;exitX=0.5;exitY=0;exitDx=0;exitDy=0;" edge="1" parent="1" source="6d-npiuzgEx4-nf97ixw-17" target="6d-npiuzgEx4-nf97ixw-15">
+          <mxGeometry relative="1" as="geometry" />
+        </mxCell>
+        <mxCell id="6d-npiuzgEx4-nf97ixw-17" value="" style="image;aspect=fixed;perimeter=ellipsePerimeter;html=1;align=center;shadow=0;dashed=0;spacingTop=3;image=img/lib/active_directory/user_accounts.svg;" vertex="1" parent="1">
+          <mxGeometry x="520" y="751" width="50" height="48.5" as="geometry" />
+        </mxCell>
+        <mxCell id="6d-npiuzgEx4-nf97ixw-20" style="edgeStyle=orthogonalEdgeStyle;rounded=0;orthogonalLoop=1;jettySize=auto;html=1;exitX=0.5;exitY=0;exitDx=0;exitDy=0;endArrow=none;endFill=0;" edge="1" parent="1" source="6d-npiuzgEx4-nf97ixw-18">
+          <mxGeometry relative="1" as="geometry">
+            <mxPoint x="620" y="680" as="targetPoint" />
+            <Array as="points">
+              <mxPoint x="695" y="705" />
+              <mxPoint x="621" y="705" />
+            </Array>
+          </mxGeometry>
+        </mxCell>
+        <mxCell id="6d-npiuzgEx4-nf97ixw-18" value="" style="image;aspect=fixed;perimeter=ellipsePerimeter;html=1;align=center;shadow=0;dashed=0;spacingTop=3;image=img/lib/active_directory/user_accounts.svg;" vertex="1" parent="1">
+          <mxGeometry x="670" y="759" width="50" height="48.5" as="geometry" />
+        </mxCell>
+        <mxCell id="6d-npiuzgEx4-nf97ixw-21" value="Load Balancer" style="text;html=1;strokeColor=none;fillColor=none;align=center;verticalAlign=middle;whiteSpace=wrap;rounded=0;" vertex="1" parent="1">
+          <mxGeometry x="529.75" y="640" width="60" height="30" as="geometry" />
+        </mxCell>
+        <mxCell id="6d-npiuzgEx4-nf97ixw-22" value="AutoScaling On Cloud" style="text;html=1;strokeColor=none;fillColor=none;align=center;verticalAlign=middle;whiteSpace=wrap;rounded=0;" vertex="1" parent="1">
+          <mxGeometry x="600" y="460" width="140" height="50" as="geometry" />
+        </mxCell>
+        <mxCell id="6d-npiuzgEx4-nf97ixw-23" value="Tier Applications" style="text;html=1;strokeColor=none;fillColor=none;align=center;verticalAlign=middle;whiteSpace=wrap;rounded=0;" vertex="1" parent="1">
+          <mxGeometry x="539.75" y="790" width="160" height="40" as="geometry" />
+        </mxCell>
+        <mxCell id="6d-npiuzgEx4-nf97ixw-24" value="VPC" style="points=[[0,0],[0.25,0],[0.5,0],[0.75,0],[1,0],[1,0.25],[1,0.5],[1,0.75],[1,1],[0.75,1],[0.5,1],[0.25,1],[0,1],[0,0.75],[0,0.5],[0,0.25]];outlineConnect=0;gradientColor=none;html=1;whiteSpace=wrap;fontSize=12;fontStyle=0;container=1;pointerEvents=0;collapsible=0;recursiveResize=0;shape=mxgraph.aws4.group;grIcon=mxgraph.aws4.group_vpc;strokeColor=#248814;fillColor=none;verticalAlign=top;align=left;spacingLeft=30;fontColor=#AAB7B8;dashed=0;" vertex="1" parent="1">
+          <mxGeometry x="500" y="90" width="260" height="270" as="geometry" />
+        </mxCell>
+        <mxCell id="6d-npiuzgEx4-nf97ixw-25" value="Private Network" style="text;html=1;strokeColor=none;fillColor=none;align=center;verticalAlign=middle;whiteSpace=wrap;rounded=0;" vertex="1" parent="6d-npiuzgEx4-nf97ixw-24">
+          <mxGeometry x="59.75" width="120" height="30" as="geometry" />
+        </mxCell>
+      </root>
+    </mxGraphModel>
+  </diagram>
+</mxfile>
