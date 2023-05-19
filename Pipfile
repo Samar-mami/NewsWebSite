@@ -11,7 +11,9 @@ bs4 = "*"
 pandas = "*"
 docker = "*"
 jinja2 = "*"
-python-dotenv='*'
+python-dotenv = "*"
+certifi = "*"
+
 [dev-packages]
 
 [requires]

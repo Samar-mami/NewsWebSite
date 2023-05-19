@@ -17,8 +17,7 @@ WORKDIR /code
 COPY Crawler ./Crawler
 COPY Pipfile ./Pipfile
 COPY Pipfile.lock ./Pipfile.lock
-#COPY Crawler/run.py ./run.py
-
+COPY .env ./.env
 RUN pip install pipenv
 RUN pipenv install --ignore-pipfile --system
 
