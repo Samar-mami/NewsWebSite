@@ -115,18 +115,18 @@ _MONGODB_COLLECTION=your_collection_
 
 ## Solution limitations
 
-### Development
+#### Development
 - Implement unit testing
 - Implement Logging and Monitoring
 - Error Handling
 - Use scheduler to trigger scraping periodically.
 
-### Security
+#### Security
 - Add API Authentication
 - Add API rate limiting
 - Implement Access control and limit access to the database (use a private network, Firewall, security rules, access lists, …)
 
-### Deployment
+#### Deployment
 - Scalability: adjust ressources based on rules and metrics (Auto scaling on cloud)
 - Caching: Use Redis or a caching layer with the database to give most asked data in API
 
