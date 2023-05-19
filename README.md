@@ -21,9 +21,9 @@ https://docs.docker.com/desktop/install/windows-install/
 
 Pull the two docker images for my project. To do so, run these commands in you cmd terminal:
 
-`docker pull samarmami18/web-crawler`
+`docker pull samarmami18/web-crawler:v2`
 
-`docker pull samarmami18/api_test`
+`docker pull samarmami18/api_test:v2`
 
 This will get you the image in your docker space.
 
