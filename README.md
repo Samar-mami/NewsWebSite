@@ -38,9 +38,9 @@ This will get you the image in your docker space.
 
 To do this, run these commands :
 
-`docker docker run --name samarmami18/web-crawler`
+`docker run samarmami18/web-crawler:v2`
 
-`docker docker run -p 5000:5000 samarmami18/api_test`
+`docker run -p 5000:5000 samarmami18/api_test:v2`
 
 This will generate a running container for each image.
 
