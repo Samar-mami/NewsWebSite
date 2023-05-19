@@ -40,7 +40,7 @@ To do this, run these commands :
 
 `docker docker run --name samarmami18/web-crawler`
 
-`docker docker run --name samarmami18/api_test`
+`docker docker run -p 5000:5000 --name samarmami18/api_test`
 
 This will generate a running container for each image.
 
