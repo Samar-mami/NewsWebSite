@@ -113,3 +113,31 @@ _MONGODB_DB=your_db_
 _MONGODB_COLLECTION=your_collection_
 
 
+## Solution limitations
+
+### Development
+- Implement unit testing
+- Implement Logging and Monitoring
+- Error Handling
+- Use scheduler to trigger scraping periodically.
+
+### Security
+- Add API Authentication
+- Add API rate limiting
+- Implement Access control and limit access to the database (use a private network, Firewall, security rules, access lists, …)
+
+### Deployment
+- Scalability: adjust ressources based on rules and metrics (Auto scaling on cloud)
+- Caching: Use Redis or a caching layer with the database to give most asked data in API
+
+
+## Solution improvements
+
+- Improve the above limitations : Error Handling, logging, caching, security,...
+- Build full cloud architecture : low cost and fully managed
+- Add more API functionalities to access articles by Headline, Author,...
+- Add a semantic search layer in the API : Use NLP models to generate semantic understanding of articles and enable retrieval of most similar articles to a query.
+
+
+
+
