@@ -14,7 +14,9 @@ import pandas as pd
 from datetime import datetime
 
 
-# Get the author of the article
+###################################################################################################
+# Get the author of the article : this function takes the URL of the article and returns its author
+# It uses BeautifulSoup to search for the key word 'author'
 def get_author_article(url):
     res = requests.get(url)
     soup = BeautifulSoup(res.text, 'html.parser')
@@ -27,7 +29,9 @@ def get_author_article(url):
     return author
 
 
-# Get the text of the article
+###################################################################################################
+# Get the text of the article : this function takes the URL of the article and returns its text
+# It uses BeautifulSoup to search for the key word 'p' -> paragraph
 def get_article_text(url):
     res = requests.get(url)
     soup = BeautifulSoup(res.text, 'html.parser')
@@ -36,7 +40,9 @@ def get_article_text(url):
     return text
 
 
-# Create a function to get the time article
+###################################################################################################
+# Create a function to get the publication date of the article: this function takes the URL of the article and
+# returns its publication date
 def get_date_article(url):
     res = requests.get(url)
     soup = BeautifulSoup(res.text, "html.parser")
@@ -51,10 +57,11 @@ def get_date_article(url):
         return datetime_object
     else:
         return datetime(9999, 9, 9, 9, 9)
-    # formatted_datetime = datetime_object.strftime("%Y-%m-%d %H:%M")
 
 
-# Create a dataset from scraping a news website
+###################################################################################################
+# Create a dataset from scraping a news website : it takes the website url, scrap it with beautifulsoup and returnes
+# the article details : headline, text, description, kicker,...
 def scrap_website(url):
     response = requests.get(url)
     # Create BeautifulSoup object

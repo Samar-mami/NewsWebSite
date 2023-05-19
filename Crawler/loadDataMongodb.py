@@ -4,6 +4,8 @@ from dotenv import load_dotenv
 import os
 
 
+#######################################################################################################################
+# This function returns the credentials of MongoDB database.
 def get_credentials_from_env():
     load_dotenv()
     username = os.getenv('MONGODB_USERNAME')
@@ -14,9 +16,9 @@ def get_credentials_from_env():
     return username, password, database, collection
 
 
-# Example usage
-
-# Connect to MongoDB client and database/collection
+#######################################################################################################################
+# Connect to MongoDB client and database/collection : it takes the MongoDB credentials and returns the MongoDB
+# collection
 def connect_mongo_db_collection(username, password, database, collection):
     uri = "mongodb+srv://" + username + ":" + password + "@cluster0.38i5zz9.mongodb.net/?retryWrites=true&w=majority"
     try:
@@ -31,7 +33,8 @@ def connect_mongo_db_collection(username, password, database, collection):
     return collection
 
 
-# Insert the dataframe tp mongodb
+#######################################################################################################################
+# Insert the data collected from the website to MongoDB : it takes the MongoDB credentials and the data collected
 def store_data(df, username, password, database, collection):
     if 'index' not in df.columns:
         df.reset_index(inplace=True)

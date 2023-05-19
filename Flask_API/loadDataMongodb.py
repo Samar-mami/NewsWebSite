@@ -1,7 +1,22 @@
 """#Connect to MongoDB"""
 from pymongo import MongoClient
+from dotenv import load_dotenv
+import os
 
 
+#######################################################################################################################
+# This function returns the credentials of MongoDB database.
+def get_credentials_from_env():
+    load_dotenv()
+    username = os.getenv('MONGODB_USERNAME')
+    password = os.getenv('MONGODB_PASSWORD')
+    database = os.getenv('MONGODB_DATABASE')
+    collection = os.getenv('MONGODB_COLLECTION')
+    # Return the connection object or any other relevant result
+    return username, password, database, collection
+
+
+#######################################################################################################################
 # Connect to MongoDB client and database/collection
 def connect_mongo_db_collection(username, password, database, collection):
     uri = "mongodb+srv://" + username + ":" + password + "@cluster0.38i5zz9.mongodb.net/?retryWrites=true&w=majority"
@@ -17,7 +32,8 @@ def connect_mongo_db_collection(username, password, database, collection):
     return collection
 
 
-# Insert the dataframe tp mongodb
+#######################################################################################################################
+# Insert the data collected from the website to MongoDB
 def store_data(df, username, password, database, collection):
     if 'index' not in df.columns:
         df.reset_index(inplace=True)

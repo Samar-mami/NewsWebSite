@@ -3,6 +3,10 @@ from bs4 import BeautifulSoup
 import requests
 
 
+######################################################################
+# These are API functions to help you work with my Flask app
+# This function takes a HTML format and convert my HTML template to a json format
+# It takes the API response and returns a json format of it
 def convert_html_json(response):
     soup = BeautifulSoup(response.content, 'html.parser')
     # Find the table body
@@ -41,6 +45,8 @@ def convert_html_json(response):
     return data
 
 
+##################################################################################
+# This functions returns all the articles collected by the API in a json format
 def get_all_articles():
     url = 'http://127.0.0.1:5000'  # Update with your API endpoint
     response = requests.get(url)
@@ -52,6 +58,9 @@ def get_all_articles():
         return None
 
 
+##################################################################################
+# This functions returns the article by its url collected by the API in a json format
+# It takes the url as a parameter
 def get_article_by_url(url):
     host = 'http://127.0.0.1:5000/search?url=' + url  # Update with your API endpoint
     response = requests.get(host)
