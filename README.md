@@ -148,5 +148,7 @@ _MONGODB_COLLECTION=your_collection_
 - Add a semantic search layer in the API : Use NLP models to generate semantic understanding of articles and enable retrieval of most similar articles to a query.
 
 
+## Solution imagined architecture 
+![Solution architecture](WebCrawlerArchi.png)
 
 
