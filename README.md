@@ -40,7 +40,7 @@ To do this, run these commands :
 
 `docker docker run --name samarmami18/web-crawler`
 
-`docker docker run -p 5000:5000 --name samarmami18/api_test`
+`docker docker run -p 5000:5000 samarmami18/api_test`
 
 This will generate a running container for each image.
 
@@ -96,11 +96,12 @@ News website crawler
 - **DockerfileFlask:** generates the second docker image "samamrmami18/api_test"
 
 ## Notes
+
 I have created a .env file which contains the environment variables (for my case, it's the MongoDB credentials) which I use to connect to my MongoDB collection to store the data collected from the website or to collect the data stored in MongoDB with my API.
 
-You can use my crendetials for the test with docker :)
-
-If you want to import the project locally from git, feel free to create a .env file and store your own MongoDB credentials in this format:
+If you want to create your own docker image, you need to :
+- Pull my github project
+- Add a .env file to the project under the NewsWebSite to store your own MongoDB credentials in this format:
 
 _MONGODB_USERNAME=your_username_
 
@@ -109,4 +110,5 @@ _MONGODB_PASSWORD=your_password_
 _MONGODB_DB=your_db_
 
 _MONGODB_COLLECTION=your_collection_
+
 
