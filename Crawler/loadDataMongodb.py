@@ -1,6 +1,20 @@
 """#Connect to MongoDB"""
 from pymongo import MongoClient
+from dotenv import load_dotenv
+import os
 
+
+def get_credentials_from_env():
+    load_dotenv()
+    username = os.getenv('MONGODB_USERNAME')
+    password = os.getenv('MONGODB_PASSWORD')
+    database = os.getenv('MONGODB_DATABASE')
+    collection = os.getenv('MONGODB_COLLECTION')
+    # Return the connection object or any other relevant result
+    return username, password, database, collection
+
+
+# Example usage
 
 # Connect to MongoDB client and database/collection
 def connect_mongo_db_collection(username, password, database, collection):
