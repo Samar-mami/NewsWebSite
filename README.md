@@ -55,27 +55,26 @@ Welcome to the News Website API documentation. This API allows you to retrieve a
 The base URL for accessing the News Website API is: http://127.0.0.1:5000
 This is a local url (in practice, it should be a defined endpoint)
 
-#### Endpoints
-1. Get all the articles
+#### 1. Get all the articles
 Retrieves a list of the articles crawled in the news website.
 
-**Endpoint:** "/"
+***Endpoint:*** "/"
 
-**HTTP Method:** GET
+***HTTP Method:*** GET
 
-**Example:** get_all_articles()
+***Example:*** get_all_articles()
 -> in api_functions.py uses the base url to return all articles in json format.
 
-2. Get an article by its url
+#### 2. Get an article by its url
 Retrieves an article crawled in the news website by its url.
 
-**Endpoint:** "/search?url={url}"
+***Endpoint:*** "/search?url={url}"
 
-**HTTP Method:** GET
+***HTTP Method:*** GET
 
-**Parameters:** url-> the url of the article
+***Parameters:*** url-> the url of the article
 
-**Example:** get_article_by_url(url) 
+***Example:*** get_article_by_url(url) 
 -> in api_functions.py, takes a url parameter and uses the endpoint above to return the article by its url in json format.
 
 
