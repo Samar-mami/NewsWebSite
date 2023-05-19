@@ -1,7 +1,7 @@
 # News website crawler project
 ## Description
 
-The News Website Crawler is a Python-based project that allows users to scrape and collect news articles from v the website www.thegaridan.com. 
+The News Website Crawler is a Python-based project that allows users to scrape and collect news articles from the website https://www.theguaridan.com. 
 It is designed to streamline the process of gathering news data from the website "the garidan" for analysis, research, or any other purpose.
 The crawler utilizes web scraping techniques to extract relevant information such as article titles, authors, publication dates, content, and URLs the news website. It navigates through the website's pages, follows links, and retrieves the desired data, all while adhering to the website's terms of service and respecting ethical considerations.
 
@@ -54,20 +54,17 @@ This will get you the image in your docker space.
 
 - Execute the first container if you want to fill the MongoDB database with the articles of the day (This procedure could have been automated with Kubernetes for a daily execution for example)
 
+`docker run samarmami18/web-crawler:v2`
+
 - Execute the second container to run the API application. This will give you an endpoint : http://127.0.0.1:5000 to access data in two ways:
 
   - Data rendred in HTML formal : on this base url http://127.0.0.1:5000 for the sake of the test.
   - Data in json format : to get data in json format, the _api_functions.py_ script was written for you (see the section API documentation)
 
-To do this, run these commands :
-
-`docker run samarmami18/web-crawler:v2`
-
 `docker run -p 5000:5000 samarmami18/api_test:v2`
 
-This will generate a running container for each image.
 
-You can see the container name with this command:
+You can see the containers name with this command:
 
 `docker ps -a`
 
