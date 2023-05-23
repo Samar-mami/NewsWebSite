@@ -2,7 +2,7 @@
 ## Description
 
 The News Website Crawler is a Python-based project that allows users to scrape and collect news articles from the website https://www.theguaridan.com. 
-It is designed to streamline the process of gathering news data from the website "the garidan" for analysis, research, or any other purpose.
+It is designed to streamline the process of gathering news data from the website "the guardian" for analysis, research, or any other purpose.
 The crawler utilizes web scraping techniques to extract relevant information such as article titles, authors, publication dates, content, and URLs the news website. It navigates through the website's pages, follows links, and retrieves the desired data, all while adhering to the website's terms of service and respecting ethical considerations.
 
 ## Installation
